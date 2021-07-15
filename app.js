@@ -13,9 +13,7 @@ const { createUser, login } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-/*
 const { PORT = 3000 } = process.env;
-*/
 
 const whitelist = [
   'http://localhost:3000',
@@ -92,4 +90,4 @@ app.use((err, req, res, next) => {
   next();
 });
 
-app.listen(2000);
+app.listen(PORT);
