@@ -13,7 +13,7 @@ const { createUser, login } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-const { PORT = 3000 } = process.env;
+const { PORT } = process.env;
 
 const whitelist = [
   'http://localhost:3000',
